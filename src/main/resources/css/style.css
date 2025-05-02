@@ -1,0 +1,14 @@
+.root {
+    -fx-background-color: #f4f4f4;
+}
+.label {
+    -fx-font-family: "Arial";
+    -fx-text-fill: #2e7d32; /* Green theme */
+}
+.button {
+    -fx-background-color: #4caf50;
+    -fx-text-fill: white;
+}
+.button:hover {
+    -fx-background-color: #388e3c;
+}
