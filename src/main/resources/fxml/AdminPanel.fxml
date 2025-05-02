@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+<VBox fx:controller="controller.AdminPanelController" xmlns:fx="http://javafx.com/fxml" alignment="center" spacing="10">
+    <ChoiceBox fx:id="productChoice" />
+    <TextField fx:id="priceField" promptText="New Price" />
+    <TextField fx:id="stockField" promptText="New Stock" />
+    <Button text="Update" onAction="#updateProduct" />
+    <Button text="Cancel" onAction="#cancel" />
+</VBox>

@@ -6,6 +6,7 @@
 
 <VBox fx:controller="controller.ProductCatalogController" xmlns:fx="http://javafx.com/fxml">
     <Label text="Greengrocer Marketplace" style="-fx-font-size: 24px;"/>
-    <GridPane fx:id="productGrid" hgap="10" vgap="10"/>
-    <Button text="View Cart" onAction="#goToCart"/>
+    <GridPane fx:id="productGrid" hgap="10" vgap="10" />
+    <Button text="View Cart" onAction="#goToCart" />
+    <Button fx:id="adminUpdateButton" text="Admin Update" onAction="#showAdminPanel" />
 </VBox>
