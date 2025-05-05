@@ -2,7 +2,6 @@ package dao;
 
 import model.Product;
 import util.DatabaseUtil;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -32,13 +31,35 @@ public class ProductDAO {
         return products;
     }
 
-    public void updateProduct(int id, double price, int stock) throws SQLException {
-        String query = "UPDATE products SET price = ?, stock = ? WHERE id = ?";
+    public void updateProductPrice(int id, double price) throws SQLException {
+        String query = "UPDATE products SET price = ? WHERE id = ?";
         try (Connection conn = DatabaseUtil.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {
             stmt.setDouble(1, price);
-            stmt.setInt(2, stock);
-            stmt.setInt(3, id);
+            stmt.setInt(2, id);
+            stmt.executeUpdate();
+        }
+    }
+
+    public void updateProductStock(int id, int stock) throws SQLException {
+        String query = "UPDATE products SET stock = ? WHERE id = ?";
+        try (Connection conn = DatabaseUtil.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            stmt.setInt(1, stock);
+            stmt.setInt(2, id);
+            stmt.executeUpdate();
+        }
+    }
+
+    public void addProduct(String name, double price, int stock, String description, String imagePath) throws SQLException {
+        String query = "INSERT INTO products (name, price, stock, description, image_path) VALUES (?, ?, ?, ?, ?)";
+        try (Connection conn = DatabaseUtil.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            stmt.setString(1, name);
+            stmt.setDouble(2, price);
+            stmt.setInt(3, stock);
+            stmt.setString(4, description);
+            stmt.setString(5, imagePath);
             stmt.executeUpdate();
         }
     }

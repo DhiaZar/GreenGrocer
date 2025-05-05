@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Region?>
 
-<VBox fx:controller="controller.ProductCatalogController" xmlns:fx="http://javafx.com/fxml">
-    <Label text="Greengrocer Marketplace" style="-fx-font-size: 24px;"/>
-    <GridPane fx:id="productGrid" hgap="10" vgap="10" />
-    <Button text="View Cart" onAction="#goToCart" />
-    <Button fx:id="adminUpdateButton" text="Admin Update" onAction="#showAdminPanel" />
+<?import javafx.scene.layout.HBox?>
+<VBox fx:controller="controller.ProductCatalogController" xmlns:fx="http://javafx.com/fxml" alignment="center" spacing="10" style="-fx-padding: 0 0 20 0;">
+    <GridPane fx:id="productGrid" alignment="center"/>
+    <Region VBox.vgrow="ALWAYS"/> <!-- Spacer to push buttons down -->
+    <HBox alignment="center" spacing="10">
+        <Button fx:id="adminUpdateButton" text="Admin Update" onAction="#showAdminPanel" styleClass="button"/>
+        <Button fx:id="viewCartButton" text="View Cart" onAction="#goToCart" styleClass="button"/>
+        <Button text="Go Back" onAction="#goBack" styleClass="button"/>
+    </HBox>
 </VBox>

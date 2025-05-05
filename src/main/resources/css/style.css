@@ -1,14 +1,104 @@
+/* General styles */
 .root {
-    -fx-background-color: #f4f4f4;
-}
-.label {
+    -fx-background-color: #d0e8a4; /* Tea Green background */
     -fx-font-family: "Arial";
-    -fx-text-fill: #2e7d32; /* Green theme */
 }
-.button {
-    -fx-background-color: #4caf50;
+
+/* Product catalog styles */
+.product-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #8fbc8f; /* Dark Sea Green border */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.product-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6b8e23; /* Olive Drab text */
+    -fx-alignment: center;
+}
+
+/* Buttons in product catalog */
+.add-to-cart-button {
+    -fx-background-color: #228b22; /* Forest Green */
     -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-padding: 4px 8px;
+    -fx-background-radius: 4px;
 }
+
+.add-to-cart-button:hover {
+    -fx-background-color: #1a6b1a; /* Darker Forest Green */
+}
+
+/* Cart window styles */
+.cart-item-box {
+    -fx-background-color: #ffffff;
+    -fx-padding: 5px;
+    -fx-border-color: #8fbc8f; /* Dark Sea Green */
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+}
+
+.quantity-button {
+    -fx-background-color: #228b22; /* Forest Green */
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-padding: 2px 6px;
+    -fx-background-radius: 3px;
+}
+
+.quantity-button:hover {
+    -fx-background-color: #1a6b1a; /* Darker Forest Green */
+}
+
+.quantity-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6b8e23; /* Olive Drab */
+}
+
+.clear-cart-button {
+    -fx-background-color: #ff6347; /* Tomato (contrasting color for clear action) */
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-padding: 4px 8px;
+    -fx-background-radius: 4px;
+}
+
+.clear-cart-button:hover {
+    -fx-background-color: #e5533d; /* Darker Tomato */
+}
+
+/* Login screen styles */
+.text-field, .password-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #8fbc8f; /* Dark Sea Green */
+    -fx-border-radius: 4px;
+    -fx-padding: 4px;
+}
+
+.button {
+    -fx-background-color: #228b22; /* Forest Green */
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 4px 12px;
+    -fx-background-radius: 4px;
+}
+
 .button:hover {
-    -fx-background-color: #388e3c;
+    -fx-background-color: #1a6b1a; /* Darker Forest Green */
+}
+
+/* Admin panel styles */
+.choice-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #8fbc8f; /* Dark Sea Green */
+    -fx-border-radius: 4px;
+}
+
+.label {
+    -fx-text-fill: #2F4F2F; /* Forest Green text for labels */
 }
